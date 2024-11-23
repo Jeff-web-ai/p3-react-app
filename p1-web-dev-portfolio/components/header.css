@@ -1,0 +1,138 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--size-base);
+    padding-bottom: var(--size-base);
+    background-color: var(--clr-cyan600);
+    padding-left: var(--size-base);
+    padding-right: var(--size-base);
+    z-index: 1000;
+}
+
+.hamburger-icon div {
+    height: 3px;
+    background-color: var(--clr-light);
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger-icon:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* click event */
+#menu-toggle:checked + .hamburger-icon #top-line {
+    transform: translateY(9px) rotate(45deg);
+}
+
+#menu-toggle:checked + .hamburger-icon #middle-line {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger-icon #bottom-line {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* menu */
+.header__nav-menu {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__nav-menu a {
+    text-decoration: none;
+    color: var(--clr-light);
+    padding: 12px;
+    background-color: var(--clr-cyan600);
+}
+
+.header__nav-menu a:hover {
+    color: var(--clr-rose);
+    transition: all 0.3s ease;
+}
+
+.header__nav-menu {
+    display: none;
+}
+
+#menu-toggle:checked ~ .header__nav-menu {
+    display: flex;
+
+}
+
+/* sm */
+/* @media (min-width: 600px) {
+    
+} */
+
+/* md */
+@media (min-width: 768px) {
+    .hamburger-icon {
+        display: none;
+    }
+    .header__nav-menu {
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        position: relative;
+    }
+
+    .header__nav-menu a {
+        background-color: transparent;
+    } 
+
+    .header__nav-link {
+        font-size: var(--size-xl);
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .header {
+        padding-left: var(--size-2xl);
+        padding-right: var(--size-2xl);
+    }
+    
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .header {
+        padding-left: var(--size-4xl);
+        padding-right: var(--size-4xl);
+    }   
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    .header {
+        padding-left: var(--size-6xl);
+        padding-right: var(--size-6xl);
+    } 
+}

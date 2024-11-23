@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./styles/style.css"/>
+  <link rel="stylesheet" href="./components/header.css">
+  <link rel="stylesheet" href="./components/hero.css">
+  <link rel="stylesheet" href="./components/about.css">
+  <link rel="stylesheet" href="./components/work.css">
+  <link rel="stylesheet" href="./components/contact.css">
+  <link rel="stylesheet" href="./components/footer.css">
+  <link rel="stylesheet" href="./styles/util.css"/>
+</head>
+<body>
+  <header class="header container">
+    <a href="#home" class="header__logo"><img src="./images/logo.png" height="75"></a>
+    <nav class="header__nav">
+      <input type="checkbox" id="menu-toggle">
+      <label class="hamburger-icon" for="menu-toggle">
+        <div id="top-line"></div>
+        <div id="middle-line"></div>
+        <div id="bottom-line"></div>
+      </label>
+      <div class="header__nav-menu">
+        <a class="header__nav-link" href="#home">Home</a>
+        <a class="header__nav-link" href="#about">About</a>
+        <a class="header__nav-link" href="#projects">Projects</a>
+        <a class="header__nav-link" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero contianer" id="home">
+      <div class="hero__img-wrapper">
+        <img class="hero__img" src="./images/profile-pic.jpg" alt="profile picture">
+      </div>
+      <div class="hero_content">
+        <h1 class="hero__title">FULL-STACK <br> DEVELOPER</h1>
+        <h2 class="hero__subtitle">Hi, I am Jeff</h2>
+        <p class="hero_description">
+          My passion for <strong>Web development</strong> drives me to continually enhance my coding skills and build a solid foundation in the <strong>MERN</strong> stack. 
+          I am eager to be part of innovative projects and always willing to expand my expertise. 
+          I thrive in collaborative environments and have developed into a well-rounded <strong>full-stack web developer</strong>, ready to excel in the industry..
+        </p>
+        <a class="hero__btn btn" href="#contact">Contact me</a>
+        <a class="hero__btn btn" href="Vitangcol, Jefferson D._Resume.pdf" download>Download CV</a>
+      </div>
+    </section>
+    <section class="about contianer section" id="about">
+      <div class="about__content">
+        <h1 class="about__title">About</h1>
+        <p class="about__description">
+          Hello, my name is Jefferson Vitangcol. I am a 26-year-old Full Stack Developer with a Bachelor of Science degree in Computer Engineering, earned in 2019. 
+          Fascinated by technology from a young age, I pursued a degree in Computer Engineering to hone my skills and knowledge, 
+          preparing for a career at the forefront of innovation and creation.
+        </p>
+        <p class="about__description">
+          This curiosity led me to pursue a degree in Computer Engineering, 
+          where I honed my skills and knowledge, preparing myself for a career at the 
+          forefront of innovation and creation. In my free time, I immerse myself in a variety of 
+          activities that keep my mind sharp and my body active.
+        </p>
+        <hr class="about__hr">
+        <h2 class="about__subtitle">Technical Skills</h2>
+        <div class="about__ul-container">
+          <ul class="about__ul">
+            <li class="about__list">HTML</li>
+            <li class="about__list">CSS</li>
+            <li class="about__list">JavaScript</li>
+          </ul>
+          <ul class="about__ul">
+            <li class="about__list">Node js</li>
+            <li class="about__list">MongoDB</li>
+            <li class="about__list">Postman</li>
+          </ul>
+        </div>
+      </div>
+      <div class="about__img-wrapper">
+        <img class="about__img" src="./images/profile-picture.jpg" alt="profile-picture"/>
+      </div>
+    </section>
+    <section class="work contianer section" id="projects">
+      <h1 class="work__title">Projects</h1>
+      <div class="work__wrapper">
+        <div class="work__card card1">
+          <img class="work__card-img" src="./images/WaterLand-1200x736.webp" alt="picture of waterland">
+          <div class="work__card-content">
+            <h3 class="work__card-title">Waterland</h3>
+            <p class="work__card-description">
+              lipsum dolor sit amet consectetur adipisicing elit. Libero quia velit molestiae ipsum! Molestiae
+            </p>
+            <a class="work__btn btn" href="https://themewagon.github.io/WaterLand/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="work__card card2">
+          <img class="work__card-img" src="./images/uoni-184.jpg" alt="picture of waterland">
+          <div class="work__card-content">
+            <h3 class="work__card-title">Uoni</h3>
+            <p class="work__card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quia velit molestiae ipsum! Molestiae
+            </p>
+            <a class="work__btn btn" href="https://themewagon.github.io/Uoni/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="work__card card3">
+          <img class="work__card-img" src="./images/alien-184.jpg" alt="picture of waterland">
+          <div class="work__card-content">
+            <h3 class="work__card-title">Alien</h3>
+            <p class="work__card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quia velit molestiae ipsum! Molestiae
+            </p>
+            <a class="work__btn btn" href="https://themewagon.github.io/alien/" target="_blank">Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact contianer section" id="contact">
+      <h1 class="contact__title">Keep in touch</h1>
+      <div class="contact__container">
+        <form class="contact__contact-form">
+            <label class="contact__label" for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label class="contact__label" for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label class="contact__label" for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button class="contact__btn btn" type="submit">Submit</button>
+        </form>
+    </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <h3 class="footer__title">Jefferson Vitangcol</h3>
+      <ul class="footer__socials">
+        <li>
+          <a href="https://www.facebook.com/jeffersonvitangcol/" target="_blank"><img src="./images/facebook.png"/></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jefferson-vitangcol-4b85841b1/" target="_blank"><img src="./images/linkedin.png"/></a>
+        </li>
+        <li>
+          <a href="https://gitlab.com/jeffersonvitangcol" target="_blank"><img src="./images/gitlab.png"></a>
+        </li>
+        <li>
+          <a href="mailto:jeffersonvitangcol@gmail.com"><img src="./images/gmail.png"/></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <p>copyright &copy;2024 jeffersonvitangcol</p>
+    </div>
+  </footer>
+</body>
+</html>
